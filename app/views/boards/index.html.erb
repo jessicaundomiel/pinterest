@@ -1,0 +1,24 @@
+<h1>Listing boards</h1>
+
+<div id="columns">
+    <% @boards.each do |board| %>
+    <div class="item-background">
+      <div class="item-info">
+        <h3><%= board.name %></h3>
+        <h4><%= board.about %></h4>
+        <h4> Board Creator: <%= board.user.first_name rescue "N/A" %></h4>
+      </div>
+      <div class="item-links">
+       <%= link_to 'Show', board %>
+       <%= link_to 'Edit', edit_board_path(board) %>
+       <%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+<div id="navbar2">
+    <%= link_to 'Delete All Boards', Board, method: :delete, data: {confirm: 'Are you sure?' } %> |
+    <%= link_to 'New Board', new_board_path %>
+</div>

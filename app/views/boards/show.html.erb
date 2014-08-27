@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @board.name %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @board.about %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @board.user.first_name rescue "N/A" %>
+</p>
+ 
+<p>
+ <strong>Pins:</strong>
+ <div id="columns">
+  <% @board.pins.each do |pin| %> 
+    <div class="item-background item-info <%= ' nsfw' if pin.nsfw == true %>">
+      <%= pin.name %>
+      <div class="content" style="<%= 'display:none;' if @global_show_nsfw.eql?(false) && pin.nsfw.eql?(true) %>">
+        <%= image_tag(pin.image_url, :width => 100)%>
+        <% if pin.nsfw == true %>
+          <h5 class="nsfw-button">NSFW</h5>
+        <% end %>
+        <h4>Pin Creator: <%= pin.user.full_name rescue "N/A" %></h4>
+      </div>
+      <% if pin.nsfw == true %>
+      <div class="show-msg" style="<%= 'display:none;' unless @global_show_nsfw.eql?(false) && pin.nsfw.eql?(true) %>">
+        Show Content
+      </div>
+      <% end %>
+  	</div>
+  	<% end %>
+</div>
+</p>
+
+<div id="navbar2">
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
+</div>

@@ -1,0 +1,29 @@
+<h1>Listing users</h1>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>View User Details</th>
+    </tr>
+  </thead>
+
+  <p><%= @some_text %></p>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= link_to 'Show', user %> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div id="navbar2">
+    <%= link_to 'Delete All Users', User, method: :delete, data: {confirm: 'Are you sure?' } %> |
+    <%= link_to 'New User', new_user_path %>
+</div>

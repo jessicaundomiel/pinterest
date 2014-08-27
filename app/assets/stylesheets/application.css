@@ -1,0 +1,203 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap_and_customization.css
+ *= require_self
+ */
+
+ #navbar a:link, #navbar a:visited, #navbar a:active {
+ 	text-decoration: none;
+ 	font-size: 25px;
+ 	font-family: cursive;
+ 	color: #FF4500;
+ 	background-color: transparent;
+ }
+
+ #navbar a:hover {
+ 	font-weight: bold
+ }
+
+ #sign_up {
+ 	color: #FF4500;
+ }
+
+ #navbar2 a:link, #navbar2 a:visited, #navbar2 a:hover, #navbar2 a:active {
+ 	text-decoration: none;
+ 	font-size: 25px;
+ 	font-family: cursive;
+ 	color: #FF4500;
+ 	background-color: transparent;
+ }
+
+ #navbar2 {
+ 	width: 600px;
+ 	text-align: center;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	padding: 20px;
+ }
+
+#columns {
+	column-width: 320px;
+	column-gap: 15px;
+	column-count: 4;
+	column-fill: auto;
+	-webkit-column-gap: 15px;
+	-webkit-column-count: 4;
+	-webkit-column-fill: auto;
+	-webkit-column-width: 320px;
+	width: 90%;
+	max-width: 1100px;
+	margin: 50px auto;
+	-moz-column-gap: 15px;
+	-moz-column-count: 4;
+	-moz-column-fill: auto;
+	-moz-column-width: 320px;
+}
+
+ .content {
+ 	text-align: center;
+ }
+
+ .show-msg {
+ 	text-align: center;
+ 	font-size: 15px;
+ }
+
+ .btn-primary a:hover {
+ 	background-color: transparent;
+ }
+
+ .jumbotron {
+ 	background-color: #FFFACD;
+ 	color: black;
+ 	opacity: 0.7;
+ 	border-radius: 50px;
+ 	text-align: center;
+ }
+
+ .field {
+ 	text-align: center;
+ 	font-family: cursive;
+ 	font-size: 20px;
+ 	padding: 15px;
+ }
+
+ .field input {
+ 	font-family: Courier;
+ 	font-size: 15px;
+ 	text-align: center;
+ 	width: 250px;
+ }
+
+.actions {
+	text-align: center;
+}
+
+.item-background {
+	background: #FFFACD;
+	border: 2px solid ##fcfcfc;
+	box-shadow: 0 1px 2px #888888;
+	margin: 0 2px 15px;
+	transition: opacity: .4s ease-in-out;
+	column-break-inside: avoid;
+	display: inline-block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.item-background:not(:hover) {
+	opacity: 0.7;
+}
+
+.item-info {
+	padding: 15px;
+	padding-bottom: 10px;
+	padding-top: 0px;
+	text-align: center;
+	font-size: 15px;
+	font-family: cursive;
+}
+
+.item-links {
+	text-align: center;
+	font-size: 15px;
+	font-family: cursive;
+}
+
+.pin-image {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+ h1 {
+ 	text-align: center;
+ 	padding: 10px;
+ 	font-family: cursive;
+ 	font-size: 50px;
+ 	color: #CC3333;
+ }
+
+body {
+	background-image: url("beachsunrise.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: #FFFACD;
+	background-size: 1400px;
+	font-family: cursive;
+	color: #CC6633;
+	padding: 100px;
+}
+
+p {
+	text-align: center;
+	padding: 5px;
+	font-family: cursive;
+	font-size: 20px;
+}
+
+ul {
+	font-family: cursive;
+	font-size: 20px;
+	list-style-position: inside;
+	text-align: center;
+}
+
+table {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table, th, td {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	height: 40px;
+	background-color: #FFFACD;
+	color: #FFA500;
+	font-size: 20px;
+}
+
+td {
+	text-align: center;
+	padding: 5px;
+	font-family: cursive;
+	font-size: 15px;
+	color: #990033;
+}

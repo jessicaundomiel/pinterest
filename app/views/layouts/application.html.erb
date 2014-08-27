@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake Pinterest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">
+        <%= link_to "Fake Pinterest", home_path %>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Users", users_path %></li>
+        <li><%= link_to "Boards", boards_path %></li>
+        <li><%= link_to "Pins", pins_path %></li>
+        <li><%= link_to "About", about_path %></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<% if notice %>
+ <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<% if alert %>
+ <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<span onclick='$(".nsfw .content").toggle(); $(".show-msg").toggle();'>HIDE/SHOW NSFW</span>
+<%= yield %>
+
+   <script>
+      $(document).ready(function() {
+
+        $(".nsfw .content").on('click', function() {
+
+          var self = $(this);
+          var controlDiv = self.parent();
+
+          self.hide();
+
+          var showMsg = controlDiv.children('.show-msg');
+          showMsg.show();
+        });
+
+        $(".nsfw .show-msg").on('click', function() {
+
+          var self = $(this);
+          var controlDiv = self.parent();
+
+          self.hide();
+
+          var content = controlDiv.children('.content');
+          content.show();
+        });
+      });
+    </script>
+
+</body>
+</html>
