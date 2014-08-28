@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!, :except => [:about, :home] 
-  before_action :set_global_nsfw
+  # before_action :set_global_nsfw
 
   # def set_global_nsfw
   # 	@global_show_nsfw = current_user.show_nsfw?
