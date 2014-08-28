@@ -108,8 +108,8 @@
 	border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 2px #888888;
 	margin: 0 2px 15px;
-	transition: opacity: .4s ease-in-out;
-	column-break-inside: avoid;
+	/*transition: opacity: .4s ease-in-out;
+	column-break-inside: avoid;*/
 	display: inline-block;
 	width: 100%;
 	border-radius: 5px;
