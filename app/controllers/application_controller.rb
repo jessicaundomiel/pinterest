@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, :except => [:about, :home] 
   before_action :set_global_nsfw
 
-  def set_global_nsfw
-  	@global_show_nsfw = current_user.show_nsfw?
-  end
+  # def set_global_nsfw
+  # 	@global_show_nsfw = current_user.show_nsfw?
+  # end
 end
